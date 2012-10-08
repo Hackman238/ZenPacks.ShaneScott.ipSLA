@@ -1,0 +1,48 @@
+<form id="addJitterSLAS_form" tal:attributes="action context/absolute_url_path">
+<input type="hidden" name="userCreated" value="True">
+<span id="errmsg" style="color:red;"></span>
+<br/>
+<tal:block tal:condition="python:getattr(here, 'device', None)">
+<p>
+<span id="ip_label">Host:&nbsp;</span>
+<input id="deviceIp" name="deviceIp" tal:attributes="value python:here.device().getManageIp()">
+<br><br>
+<span id="community_label">RW community:&nbsp;</span>
+<input id="community" name="community" tal:attributes="value python:here.device().getAttribute('zSnmpCommunity')">
+<br><br>
+<span id="new_id_label">Tag:&nbsp;</span>
+<input id="new_id" name="newId">
+<br><br>
+<span id="new_rttIndex_label">Instance:&nbsp;</span>
+<input id="new_rttIndex" name="rttIndex">
+<br><br>
+<span id="new_rttMonCtrlAdminOwner_label">Owner:&nbsp;</span>
+<input id="new_rttMonCtrlAdminOwner" name="rttMonCtrlAdminOwner" value="zenoss">
+<br><br>
+<span id="new_rttMonEchoAdminTargetAddress_label">Target:&nbsp;</span>
+<input id="new_rttMonEchoAdminTargetAddress" name="rttMonEchoAdminTargetAddress">
+<br><br>
+<span id="new_rttMonEchoAdminTargetPort_label">Port:&nbsp;</span>
+<input id="new_rttMonEchoAdminTargetPort" name="rttMonEchoAdminTargetPort">
+<br><br>
+<span id="new_rttMonEchoAdminInterval_label">Freq:&nbsp;</span>
+<input id="new_rttMonEchoAdminInterval" name="rttMonEchoAdminInterval" value=60>
+<br><br>
+<span id="new_rttMonEchoAdminNumPackets_label"># Packets:&nbsp;</span>
+<input id="new_rttMonEchoAdminNumPackets" name="rttMonEchoAdminNumPackets" value=100>
+<br><br>
+</p>
+</tal:block>
+</form>
+<script>
+var addJitterSLAS_form = new Zenoss.dialog.DialogFormPanel({
+    existingFormId: 'addJitterSLAS_form',
+    submitName: 'manage_addJitterSLAS:method',
+    jsonResult: false,
+    listeners: {
+        actioncomplete: Zenoss.env.componentReloader('SLAS')
+    }
+});
+
+Ext.get('new_id').focus();
+</script>

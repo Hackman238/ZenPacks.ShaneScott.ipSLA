@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+. $ZENHOME/bin/zenfunctions
+
+PRGHOME=$ZENHOME/Products/ZenRRD
+SRVCHOME=$ZENHOME/Products/ZenHub/services
+PRGNAME=zensla.py
+SRVCNAME=SLAPerformanceConfig.py
+CFGFILE=$CFGDIR/zensla.conf
+
+sed -i 's/\"zeneventlog\"])/\"zeneventlog\"\, \"zensla\"])/g' $ZENHOME/Products/ZenEvents/EventFilter.py
+sed -i "s/'zenwinperf')/'zenwinperf'\, 'zensla')/g" $ZENHOME/Products/ZenModel/DeviceComponent.py
+
+if [ ! -f $CFGFILE ]; then
+    touch $CFGFILE
+fi
+
+generic "$@"

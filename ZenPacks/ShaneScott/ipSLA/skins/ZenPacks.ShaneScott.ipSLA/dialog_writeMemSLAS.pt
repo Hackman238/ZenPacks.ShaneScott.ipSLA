@@ -1,0 +1,28 @@
+<form id="writeMemSLAS_form" tal:attributes="action context/absolute_url_path">
+<input type="hidden" name="userCreated" value="True">
+<span id="errmsg" style="color:red;"></span>
+<br/>
+<tal:block tal:condition="python:getattr(here, 'device', None)">
+<p>
+<span id="ip_label">Management IP:&nbsp;</span>
+<input id="deviceIp" name="deviceIp" tal:attributes="value python:here.device().getManageIp()">
+<br><br>
+<span id="community_label">Write community:&nbsp;</span>
+<input id="community" name="community" tal:attributes="value python:here.device().getAttribute('zSnmpCommunity')">
+<br><br>
+Press OK to write memory
+</p>
+</tal:block>
+</form>
+<script>
+var writeMemSLAS_form = new Zenoss.dialog.DialogFormPanel({
+    existingFormId: 'writeMemSLAS_form',
+    submitName: 'manage_writeMemSLAS:method',
+    jsonResult: false,
+    listeners: {
+        actioncomplete: Zenoss.env.componentReloader('SLAS')
+    }
+});
+
+Ext.get('new_id').focus();
+</script>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:five="http://namespaces.zope.org/five">
+
+    <!-- Includes: Browser Configuration -->
+    <include package=".browser"/>
+
+    <!-- Info Adapters -->
+    <adapter factory=".info.SLADataSourceInfo"
+         for=".datasources.SLADataSource.SLADataSource"
+         provides=".interfaces.ISLADataSourceInfo"
+         />
+
+    <adapter factory=".info.SLAsInfo"
+         for=".SLAs.SLAs"
+         provides=".interfaces.ISLAsInfo"
+         />
+
+    <adapter
+        name="sla"
+        provides=".interfaces.ISLAFacade"
+        for="*"
+        factory=".facades.SLAFacade"
+        />
+
+    <!-- Import directRouter Directive -->
+    <include package="Products.ZenUtils.extdirect.zope" file="meta.zcml"/>
+
+    <!-- Define the Router and Facade -->
+    <browser:directRouter
+        name="sla_router"
+        for="*"
+        class=".routers.SLARouter"
+        namespace="Zenoss.remote"
+        permission="zenoss.View"
+        />
+
+</configure>

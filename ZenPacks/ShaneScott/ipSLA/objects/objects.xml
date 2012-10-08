@@ -1,0 +1,2417 @@
+<?xml version="1.0"?>
+<objects>
+<!-- ('', 'zport', 'dmd', 'Devices', 'Network', 'Cisco', 'IPSLA') -->
+<object id='/zport/dmd/Devices/Network/Cisco/IPSLA' module='Products.ZenModel.DeviceClass' class='DeviceClass'>
+<property visible="True" type="lines" id="zCollectorPlugins" >
+['zenoss.snmp.NewDeviceMap', 'zenoss.snmp.DeviceMap', 'zenoss.snmp.InterfaceMap', 'SLA']
+</property>
+<tomanycont id='rrdTemplates'>
+<object id='Echo' module='Products.ZenModel.RRDTemplate' class='RRDTemplate'>
+<tomanycont id='datasources'>
+<object id='rttMonLatestRttOperApplSpecificSense' module='ZenPacks.ShaneScott.ipSLA.datasources.SLADataSource' class='SLADataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+SLA
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Cmd/Fail
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="oid" mode="w" >
+1.3.6.1.4.1.9.9.42.1.2.10.1.3
+</property>
+<tomanycont id='datapoints'>
+<object id='rttMonLatestRttOperApplSpecificSense' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+<tomanycont id='aliases'>
+<object id='rttMonLatestRttOperApplSpecificSense' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+<object id='rttMonLatestRttOperCompletionTime' module='ZenPacks.ShaneScott.ipSLA.datasources.SLADataSource' class='SLADataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+SLA
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Cmd/Fail
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="oid" mode="w" >
+1.3.6.1.4.1.9.9.42.1.2.10.1.1
+</property>
+<tomanycont id='datapoints'>
+<object id='rttMonLatestRttOperCompletionTime' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+<tomanycont id='aliases'>
+<object id='rttMonLatestRttOperCompletionTime' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+<object id='rttMonLatestRttOperSense' module='ZenPacks.ShaneScott.ipSLA.datasources.SLADataSource' class='SLADataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+SLA
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Cmd/Fail
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="oid" mode="w" >
+1.3.6.1.4.1.9.9.42.1.2.10.1.2
+</property>
+<tomanycont id='datapoints'>
+<object id='rttMonLatestRttOperSense' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+<tomanycont id='aliases'>
+<object id='rttMonLatestRttOperSense' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+<object id='rttMonLatestRttOperTime' module='ZenPacks.ShaneScott.ipSLA.datasources.SLADataSource' class='SLADataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+SLA
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Cmd/Fail
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="oid" mode="w" >
+1.3.6.1.4.1.9.9.42.1.2.10.1.5
+</property>
+<tomanycont id='datapoints'>
+<object id='rttMonLatestRttOperTime' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+<tomanycont id='aliases'>
+<object id='rttMonLatestRttOperTime' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+<tomanycont id='graphDefs'>
+<object id='Round Trip Time' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
+<property type="int" id="height" mode="w" >
+100
+</property>
+<property type="int" id="width" mode="w" >
+890
+</property>
+<property type="string" id="units" mode="w" >
+ms
+</property>
+<property type="boolean" id="log" mode="w" >
+False
+</property>
+<property type="boolean" id="base" mode="w" >
+False
+</property>
+<property type="int" id="miny" mode="w" >
+0
+</property>
+<property type="int" id="maxy" mode="w" >
+-1
+</property>
+<property type="text" id="custom" mode="w" >
+-P
+-E
+
+LINE2:rttMonLatestRttOperCompletionTime-raw#0000FF:RTT Completion Time
+
+COMMENT:\\s
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:&lt;b&gt;${here/viewName} Results&lt;/b&gt;\:
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:RTT\:
+GPRINT:rttMonLatestRttOperCompletionTime-raw:LAST:%5.2lf
+
+COMMENT:\\s
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:&lt;b&gt;${here/viewName} Spikes&lt;/b&gt;\:
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:RTT\:
+GPRINT:rttMonLatestRttOperCompletionTime-raw:MAX:%5.2lf
+
+COMMENT:\\s
+COMMENT:\\s
+</property>
+<property type="boolean" id="hasSummary" mode="w" >
+True
+</property>
+<tomanycont id='graphPoints'>
+<object id='rttMonLatestRttOperCompletionTime' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf%s
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="dpName" mode="w" >
+rttMonLatestRttOperCompletionTime_rttMonLatestRttOperCompletionTime
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Sense' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
+<property type="int" id="height" mode="w" >
+100
+</property>
+<property type="int" id="width" mode="w" >
+890
+</property>
+<property type="string" id="units" mode="w" >
+Code #
+</property>
+<property type="boolean" id="log" mode="w" >
+False
+</property>
+<property type="boolean" id="base" mode="w" >
+False
+</property>
+<property type="int" id="miny" mode="w" >
+0
+</property>
+<property type="int" id="maxy" mode="w" >
+-1
+</property>
+<property type="text" id="custom" mode="w" >
+-P
+-E
+
+LINE2:rttMonLatestRttOperSense-raw#8888FF:Op Sense
+LINE2:rttMonLatestRttOperApplSpecificSense-raw#88FF88:Specific Op Sense
+
+COMMENT:\\s
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:&lt;b&gt;${here/viewName} Results&lt;/b&gt;\:
+COMMENT:\\s
+COMMENT:\\s
+COMMENT:Op Sense\:
+GPRINT:rttMonLatestRttOperApplSpecificSense-raw:LAST:%5.0lf
+
+COMMENT:Specific Op Sense\:
+GPRINT:rttMonLatestRttOperSense-raw:LAST:%5.0lf
+
+COMMENT:\\s
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:&lt;b&gt;${here/viewName} Spikes&lt;/b&gt;\:
+COMMENT:\\s
+COMMENT:\\s
+COMMENT:Op Sense\:
+GPRINT:rttMonLatestRttOperApplSpecificSense-raw:MAX:%5.0lf
+
+COMMENT:Specific Op Sense\:
+GPRINT:rttMonLatestRttOperSense-raw:MAX:%5.0lf
+
+COMMENT:\\s
+COMMENT:\\s
+</property>
+<property type="boolean" id="hasSummary" mode="w" >
+True
+</property>
+<property type="long" id="sequence" mode="w" >
+1
+</property>
+<tomanycont id='graphPoints'>
+<object id='rttMonLatestRttOperApplSpecificSense' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property type="long" id="sequence" mode="w" >
+1
+</property>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf%s
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="dpName" mode="w" >
+rttMonLatestRttOperApplSpecificSense_rttMonLatestRttOperApplSpecificSense
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+<object id='rttMonLatestRttOperSense' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf%s
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="dpName" mode="w" >
+rttMonLatestRttOperSense_rttMonLatestRttOperSense
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+<object id='HTTP' module='Products.ZenModel.RRDTemplate' class='RRDTemplate'>
+<property type="text" id="description" mode="w" >
+HTTP SLA Template
+</property>
+<property type="string" id="targetPythonClass" mode="w" >
+ZenPacks.ShaneScott.ipSLA.SLADevice
+</property>
+<tomanycont id='datasources'>
+<object id='rttMonLatestHTTPErrorSenseDescription' module='ZenPacks.ShaneScott.ipSLA.datasources.SLADataSource' class='SLADataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+SLA
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Cmd/Fail
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="oid" mode="w" >
+1.3.6.1.4.1.9.9.42.1.5.1.1.6
+</property>
+<tomanycont id='datapoints'>
+<object id='rttMonLatestHTTPErrorSenseDescription' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+<tomanycont id='aliases'>
+<object id='rttMonLatestHTTPErrorSenseDescription' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+<object id='rttMonLatestHTTPOperDNSRTT' module='ZenPacks.ShaneScott.ipSLA.datasources.SLADataSource' class='SLADataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+SLA
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Cmd/Fail
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="oid" mode="w" >
+1.3.6.1.4.1.9.9.42.1.5.1.1.2
+</property>
+<tomanycont id='datapoints'>
+<object id='rttMonLatestHTTPOperDNSRTT' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+<tomanycont id='aliases'>
+<object id='rttMonLatestHTTPOperDNSRTT' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+<object id='rttMonLatestHTTPOperRTT' module='ZenPacks.ShaneScott.ipSLA.datasources.SLADataSource' class='SLADataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+SLA
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Cmd/Fail
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="oid" mode="w" >
+1.3.6.1.4.1.9.9.42.1.5.1.1.1
+</property>
+<tomanycont id='datapoints'>
+<object id='rttMonLatestHTTPOperRTT' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+<tomanycont id='aliases'>
+<object id='rttMonLatestHTTPOperRTT' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+<object id='rttMonLatestHTTPOperTCPConnectRTT' module='ZenPacks.ShaneScott.ipSLA.datasources.SLADataSource' class='SLADataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+SLA
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Cmd/Fail
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="oid" mode="w" >
+1.3.6.1.4.1.9.9.42.1.5.1.1.3
+</property>
+<tomanycont id='datapoints'>
+<object id='rttMonLatestHTTPOperTCPConnectRTT' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+<tomanycont id='aliases'>
+<object id='rttMonLatestHTTPOperTCPConnectRTT' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+<object id='rttMonLatestHTTPOperTransactionRTT' module='ZenPacks.ShaneScott.ipSLA.datasources.SLADataSource' class='SLADataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+SLA
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Cmd/Fail
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="oid" mode="w" >
+1.3.6.1.4.1.9.9.42.1.5.1.1.4
+</property>
+<tomanycont id='datapoints'>
+<object id='rttMonLatestHTTPOperTransactionRTT' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+<tomanycont id='aliases'>
+<object id='rttMonLatestHTTPOperTransactionRTT' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+<object id='rttMonLatestRttOperApplSpecificSense' module='ZenPacks.ShaneScott.ipSLA.datasources.SLADataSource' class='SLADataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+SLA
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Cmd/Fail
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="oid" mode="w" >
+1.3.6.1.4.1.9.9.42.1.2.10.1.3
+</property>
+<tomanycont id='datapoints'>
+<object id='rttMonLatestRttOperApplSpecificSense' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+<tomanycont id='aliases'>
+<object id='rttMonLatestRttOperApplSpecificSense' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+<object id='rttMonLatestRttOperCompletionTime' module='ZenPacks.ShaneScott.ipSLA.datasources.SLADataSource' class='SLADataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+SLA
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Cmd/Fail
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="oid" mode="w" >
+1.3.6.1.4.1.9.9.42.1.2.10.1.1
+</property>
+<tomanycont id='datapoints'>
+<object id='rttMonLatestRttOperCompletionTime' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+<tomanycont id='aliases'>
+<object id='rttMonLatestRttOperCompletionTime' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+<object id='rttMonLatestRttOperSense' module='ZenPacks.ShaneScott.ipSLA.datasources.SLADataSource' class='SLADataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+SLA
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Cmd/Fail
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="oid" mode="w" >
+1.3.6.1.4.1.9.9.42.1.2.10.1.2
+</property>
+<tomanycont id='datapoints'>
+<object id='rttMonLatestRttOperSense' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+<tomanycont id='aliases'>
+<object id='rttMonLatestRttOperSense' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+<object id='rttMonLatestRttOperTime' module='ZenPacks.ShaneScott.ipSLA.datasources.SLADataSource' class='SLADataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+SLA
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Cmd/Fail
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="oid" mode="w" >
+1.3.6.1.4.1.9.9.42.1.2.10.1.5
+</property>
+<tomanycont id='datapoints'>
+<object id='rttMonLatestRttOperTime' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+<tomanycont id='aliases'>
+<object id='rttMonLatestRttOperTime' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+<tomanycont id='graphDefs'>
+<object id='Round Trip Time' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
+<property type="int" id="height" mode="w" >
+100
+</property>
+<property type="int" id="width" mode="w" >
+890
+</property>
+<property type="string" id="units" mode="w" >
+ms
+</property>
+<property type="boolean" id="log" mode="w" >
+False
+</property>
+<property type="boolean" id="base" mode="w" >
+False
+</property>
+<property type="int" id="miny" mode="w" >
+0
+</property>
+<property type="int" id="maxy" mode="w" >
+-1
+</property>
+<property type="text" id="custom" mode="w" >
+-P
+-E
+
+LINE2:rttMonLatestRttOperCompletionTime-raw#0000FF:RTT Completion Time
+LINE2:rttMonLatestHTTPOperDNSRTT-raw#00FFFF:DNS RTT Completion Time
+LINE2:rttMonLatestHTTPOperTCPConnectRTT-raw#FF00FF:TCP Connection Completion Time
+LINE2:rttMonLatestHTTPOperTransactionRTT-raw#FF0000:Transaction Completion Time
+
+COMMENT:\\s
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:&lt;b&gt;${here/viewName} Results&lt;/b&gt;\:
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:RTT Completion Time\:
+GPRINT:rttMonLatestRttOperCompletionTime-raw:LAST:%5.2lf
+
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:DNS RTT Completion Time\:
+GPRINT:rttMonLatestHTTPOperDNSRTT-raw:LAST:%5.2lf
+
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:TCP Connection Completion Time\:
+GPRINT:rttMonLatestHTTPOperTCPConnectRTT-raw:LAST:%5.2lf
+
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:Transaction Completion Time\:
+GPRINT:rttMonLatestHTTPOperTransactionRTT-raw:LAST:%5.2lf
+
+COMMENT:\\s
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:&lt;b&gt;${here/viewName} Spikes&lt;/b&gt;\:
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:RTT\:
+GPRINT:rttMonLatestRttOperCompletionTime-raw:MAX:%5.2lf
+
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:DNS RTT Completion Time\:
+GPRINT:rttMonLatestHTTPOperDNSRTT-raw:MAX:%5.2lf
+
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:TCP Connection Completion Time\:
+GPRINT:rttMonLatestHTTPOperTCPConnectRTT-raw:MAX:%5.2lf
+
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:Transaction Completion Time\:
+GPRINT:rttMonLatestHTTPOperTransactionRTT-raw:MAX:%5.2lf
+
+COMMENT:\\s
+COMMENT:\\s
+</property>
+<property type="boolean" id="hasSummary" mode="w" >
+True
+</property>
+<tomanycont id='graphPoints'>
+<object id='rttMonLatestHTTPOperDNSRTT' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property type="long" id="sequence" mode="w" >
+3
+</property>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf%s
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="dpName" mode="w" >
+rttMonLatestHTTPOperDNSRTT_rttMonLatestHTTPOperDNSRTT
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+<object id='rttMonLatestHTTPOperTCPConnectRTT' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property type="long" id="sequence" mode="w" >
+2
+</property>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf%s
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="dpName" mode="w" >
+rttMonLatestHTTPOperTCPConnectRTT_rttMonLatestHTTPOperTCPConnectRTT
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+<object id='rttMonLatestHTTPOperTransactionRTT' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property type="long" id="sequence" mode="w" >
+1
+</property>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf%s
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="dpName" mode="w" >
+rttMonLatestHTTPOperTransactionRTT_rttMonLatestHTTPOperTransactionRTT
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+<object id='rttMonLatestRttOperCompletionTime' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf%s
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="dpName" mode="w" >
+rttMonLatestRttOperCompletionTime_rttMonLatestRttOperCompletionTime
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Sense' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
+<property type="int" id="height" mode="w" >
+100
+</property>
+<property type="int" id="width" mode="w" >
+890
+</property>
+<property type="string" id="units" mode="w" >
+Code #
+</property>
+<property type="boolean" id="log" mode="w" >
+False
+</property>
+<property type="boolean" id="base" mode="w" >
+False
+</property>
+<property type="int" id="miny" mode="w" >
+0
+</property>
+<property type="int" id="maxy" mode="w" >
+-1
+</property>
+<property type="text" id="custom" mode="w" >
+-P
+-E
+
+LINE2:rttMonLatestRttOperSense-raw#8888FF:Op Sense
+LINE2:rttMonLatestRttOperApplSpecificSense-raw#88FF88:Specific Op Sense
+
+COMMENT:\\s
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:&lt;b&gt;${here/viewName} Results&lt;/b&gt;\:
+COMMENT:\\s
+COMMENT:\\s
+COMMENT:Op Sense\:
+GPRINT:rttMonLatestRttOperApplSpecificSense-raw:LAST:%5.0lf
+
+COMMENT:Specific Op Sense\:
+GPRINT:rttMonLatestRttOperSense-raw:LAST:%5.0lf
+
+COMMENT:\\s
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:&lt;b&gt;${here/viewName} Spikes&lt;/b&gt;\:
+COMMENT:\\s
+COMMENT:\\s
+COMMENT:Op Sense\:
+GPRINT:rttMonLatestRttOperApplSpecificSense-raw:MAX:%5.0lf
+
+COMMENT:Specific Op Sense\:
+GPRINT:rttMonLatestRttOperSense-raw:MAX:%5.0lf
+
+COMMENT:\\s
+COMMENT:\\s
+</property>
+<property type="boolean" id="hasSummary" mode="w" >
+True
+</property>
+<property type="long" id="sequence" mode="w" >
+1
+</property>
+<tomanycont id='graphPoints'>
+<object id='rttMonLatestRttOperApplSpecificSense' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property type="long" id="sequence" mode="w" >
+1
+</property>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf%s
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="dpName" mode="w" >
+rttMonLatestRttOperApplSpecificSense_rttMonLatestRttOperApplSpecificSense
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+<object id='rttMonLatestRttOperSense' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf%s
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="dpName" mode="w" >
+rttMonLatestRttOperSense_rttMonLatestRttOperSense
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+<object id='Jitter' module='Products.ZenModel.RRDTemplate' class='RRDTemplate'>
+<property type="string" id="targetPythonClass" mode="w" >
+ZenPacks.ShaneScott.ipSLA.SLADevice
+</property>
+<tomanycont id='datasources'>
+<object id='rttMonEchoAdminNumPackets' module='ZenPacks.ShaneScott.ipSLA.datasources.SLADataSource' class='SLADataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+SLA
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Cmd/Fail
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="oid" mode="w" >
+1.3.6.1.4.1.9.9.42.1.2.2.1.18
+</property>
+<tomanycont id='datapoints'>
+<object id='rttMonEchoAdminNumPackets' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+<tomanycont id='aliases'>
+<object id='rttMonEchoAdminNumPackets' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+<object id='rttMonLatestJitterOperAvgJitter' module='ZenPacks.ShaneScott.ipSLA.datasources.SLADataSource' class='SLADataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+SLA
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Cmd/Fail
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="oid" mode="w" >
+1.3.6.1.4.1.9.9.42.1.5.2.1.46
+</property>
+<tomanycont id='datapoints'>
+<object id='rttMonLatestJitterOperAvgJitter' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+<tomanycont id='aliases'>
+<object id='rttMonLatestJitterOperAvgJitter' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+<object id='rttMonLatestJitterOperIAJIn' module='ZenPacks.ShaneScott.ipSLA.datasources.SLADataSource' class='SLADataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+SLA
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Cmd/Fail
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="oid" mode="w" >
+1.3.6.1.4.1.9.9.42.1.5.2.1.45
+</property>
+<tomanycont id='datapoints'>
+<object id='rttMonLatestJitterOperIAJIn' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+<tomanycont id='aliases'>
+<object id='rttMonLatestJitterOperIAJIn' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+<object id='rttMonLatestJitterOperIAJOut' module='ZenPacks.ShaneScott.ipSLA.datasources.SLADataSource' class='SLADataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+SLA
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Cmd/Fail
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="oid" mode="w" >
+1.3.6.1.4.1.9.9.42.1.5.2.1.44
+</property>
+<tomanycont id='datapoints'>
+<object id='rttMonLatestJitterOperIAJOut' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+<tomanycont id='aliases'>
+<object id='rttMonLatestJitterOperIAJOut' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+<object id='rttMonLatestJitterOperICPIF' module='ZenPacks.ShaneScott.ipSLA.datasources.SLADataSource' class='SLADataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+SLA
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Cmd/Fail
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="oid" mode="w" >
+1.3.6.1.4.1.9.9.42.1.5.2.1.43
+</property>
+<tomanycont id='datapoints'>
+<object id='rttMonLatestJitterOperICPIF' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+<tomanycont id='aliases'>
+<object id='rttMonLatestJitterOperICPIF' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+<object id='rttMonLatestJitterOperMOS' module='ZenPacks.ShaneScott.ipSLA.datasources.SLADataSource' class='SLADataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+SLA
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Cmd/Fail
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="oid" mode="w" >
+1.3.6.1.4.1.9.9.42.1.5.2.1.42
+</property>
+<tomanycont id='datapoints'>
+<object id='rttMonLatestJitterOperMOS' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+<tomanycont id='aliases'>
+<object id='rttMonLatestJitterOperMOS' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+<object id='rttMonLatestJitterOperPacketLossDS' module='ZenPacks.ShaneScott.ipSLA.datasources.SLADataSource' class='SLADataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+SLA
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Cmd/Fail
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="oid" mode="w" >
+1.3.6.1.4.1.9.9.42.1.5.2.1.27
+</property>
+<tomanycont id='datapoints'>
+<object id='rttMonLatestJitterOperPacketLossDS' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+<tomanycont id='aliases'>
+<object id='rttMonLatestJitterOperPacketLossDS' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+<object id='rttMonLatestJitterOperPacketLossSD' module='ZenPacks.ShaneScott.ipSLA.datasources.SLADataSource' class='SLADataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+SLA
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Cmd/Fail
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="oid" mode="w" >
+1.3.6.1.4.1.9.9.42.1.5.2.1.26
+</property>
+<tomanycont id='datapoints'>
+<object id='rttMonLatestJitterOperPacketLossSD' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+<tomanycont id='aliases'>
+<object id='rttMonLatestJitterOperPacketLossSD' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+<object id='rttMonLatestRttOperApplSpecificSense' module='ZenPacks.ShaneScott.ipSLA.datasources.SLADataSource' class='SLADataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+SLA
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Cmd/Fail
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="oid" mode="w" >
+1.3.6.1.4.1.9.9.42.1.2.10.1.3
+</property>
+<tomanycont id='datapoints'>
+<object id='rttMonLatestRttOperApplSpecificSense' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+<tomanycont id='aliases'>
+<object id='rttMonLatestRttOperApplSpecificSense' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+<object id='rttMonLatestRttOperCompletionTime' module='ZenPacks.ShaneScott.ipSLA.datasources.SLADataSource' class='SLADataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+SLA
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Cmd/Fail
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="oid" mode="w" >
+1.3.6.1.4.1.9.9.42.1.2.10.1.1
+</property>
+<tomanycont id='datapoints'>
+<object id='rttMonLatestRttOperCompletionTime' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+<tomanycont id='aliases'>
+<object id='rttMonLatestRttOperCompletionTime' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+<object id='rttMonLatestRttOperSense' module='ZenPacks.ShaneScott.ipSLA.datasources.SLADataSource' class='SLADataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+SLA
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Cmd/Fail
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="oid" mode="w" >
+1.3.6.1.4.1.9.9.42.1.2.10.1.2
+</property>
+<tomanycont id='datapoints'>
+<object id='rttMonLatestRttOperSense' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+<tomanycont id='aliases'>
+<object id='rttMonLatestRttOperSense' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+<object id='rttMonLatestRttOperTime' module='ZenPacks.ShaneScott.ipSLA.datasources.SLADataSource' class='SLADataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+SLA
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Cmd/Fail
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="oid" mode="w" >
+1.3.6.1.4.1.9.9.42.1.2.10.1.5
+</property>
+<tomanycont id='datapoints'>
+<object id='rttMonLatestRttOperTime' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+<tomanycont id='aliases'>
+<object id='rttMonLatestRttOperTime' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+<tomanycont id='graphDefs'>
+<object id='Jitter' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
+<property type="int" id="height" mode="w" >
+100
+</property>
+<property type="int" id="width" mode="w" >
+890
+</property>
+<property type="boolean" id="log" mode="w" >
+False
+</property>
+<property type="boolean" id="base" mode="w" >
+False
+</property>
+<property type="int" id="miny" mode="w" >
+0
+</property>
+<property type="int" id="maxy" mode="w" >
+-1
+</property>
+<property type="text" id="custom" mode="w" >
+-P
+-E
+
+LINE2:rttMonLatestJitterOperAvgJitter-raw#0000FF:Average Jitter
+LINE2:rttMonLatestJitterOperIAJIn-raw#00FF00:Jitter In
+LINE2:rttMonLatestJitterOperIAJOut-raw#FF0000:Jitter Out
+LINE2:rttMonLatestJitterOperICPIF-raw#FFFF00:ICPIF
+LINE2:rttMonLatestJitterOperMOS#00FFFF:MOS
+
+COMMENT:\\s
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:&lt;b&gt;${here/viewName} Results&lt;/b&gt;\:
+COMMENT:\\s
+COMMENT:\\s
+COMMENT:Average Jitter\:
+GPRINT:rttMonLatestJitterOperAvgJitter-raw:LAST:%5.0lf
+
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:Jitter In\:
+GPRINT:rttMonLatestJitterOperIAJIn-raw:LAST:%5.0lf
+
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:Jitter Out\:
+GPRINT:rttMonLatestJitterOperIAJOut-raw:LAST:%5.0lf
+
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:ICPIF\:
+GPRINT:rttMonLatestJitterOperICPIF-raw:LAST:%5.0lf
+
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:MOS\:
+GPRINT:rttMonLatestJitterOperMOS:LAST:%5.0lf
+
+COMMENT:\\s
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:&lt;b&gt;${here/viewName} Spikes&lt;/b&gt;\:
+COMMENT:\\s
+COMMENT:\\s
+COMMENT:Average Jitter\:
+GPRINT:rttMonLatestJitterOperAvgJitter-raw:MAX:%5.0lf
+
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:Jitter In\:
+GPRINT:rttMonLatestJitterOperIAJIn-raw:MAX:%5.0lf
+
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:Jitter Out\:
+GPRINT:rttMonLatestJitterOperIAJOut-raw:MAX:%5.0lf
+
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:ICPIF\:
+GPRINT:rttMonLatestJitterOperICPIF-raw:MAX:%5.0lf
+
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:MOS\:
+GPRINT:rttMonLatestJitterOperMOS:MAX:%5.0lf
+
+COMMENT:\\s
+COMMENT:\\s
+</property>
+<property type="boolean" id="hasSummary" mode="w" >
+True
+</property>
+<property type="long" id="sequence" mode="w" >
+2
+</property>
+<tomanycont id='graphPoints'>
+<object id='rttMonLatestJitterOperAvgJitter' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property type="long" id="sequence" mode="w" >
+4
+</property>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf%s
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="dpName" mode="w" >
+rttMonLatestJitterOperAvgJitter_rttMonLatestJitterOperAvgJitter
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+<object id='rttMonLatestJitterOperIAJIn' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property type="long" id="sequence" mode="w" >
+3
+</property>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf%s
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="dpName" mode="w" >
+rttMonLatestJitterOperIAJIn_rttMonLatestJitterOperIAJIn
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+<object id='rttMonLatestJitterOperIAJOut' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property type="long" id="sequence" mode="w" >
+2
+</property>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf%s
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="dpName" mode="w" >
+rttMonLatestJitterOperIAJOut_rttMonLatestJitterOperIAJOut
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+<object id='rttMonLatestJitterOperICPIF' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property type="long" id="sequence" mode="w" >
+1
+</property>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf%s
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="dpName" mode="w" >
+rttMonLatestJitterOperICPIF_rttMonLatestJitterOperICPIF
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+<object id='rttMonLatestJitterOperMOS' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf%s
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="rpn" mode="w" >
+100,/
+</property>
+<property type="string" id="dpName" mode="w" >
+rttMonLatestJitterOperMOS_rttMonLatestJitterOperMOS
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Packet Loss' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
+<property type="int" id="height" mode="w" >
+100
+</property>
+<property type="int" id="width" mode="w" >
+890
+</property>
+<property type="string" id="units" mode="w" >
+percentage
+</property>
+<property type="boolean" id="log" mode="w" >
+False
+</property>
+<property type="boolean" id="base" mode="w" >
+False
+</property>
+<property type="int" id="miny" mode="w" >
+0
+</property>
+<property type="int" id="maxy" mode="w" >
+-1
+</property>
+<property type="text" id="custom" mode="w" >
+-P
+-E
+
+LINE2:rttMonLatestJitterOperPacketLossSD-rpn#0000FF:Packet Loss (Source to Destination)
+LINE2:rttMonLatestJitterOperPacketLossDS-rpn#00FF00:Packet Loss (Destination to Source)
+
+COMMENT:\\s
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:&lt;b&gt;${here/viewName} Results&lt;/b&gt;\:
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:Packet Loss (Destination to Source)\:
+GPRINT:rttMonLatestJitterOperPacketLossDS-rpn:LAST:%5.2lf
+
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:Packet Loss (Source to Destination)\:
+GPRINT:rttMonLatestJitterOperPacketLossSD-rpn:LAST:%5.2lf
+
+COMMENT:\\s
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:&lt;b&gt;${here/viewName} Spikes&lt;/b&gt;\:
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:Packet Loss (Destination to Source)\:
+GPRINT:rttMonLatestJitterOperPacketLossDS-rpn:MAX:%5.2lf
+
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:Packet Loss (Source to Destination)\:
+GPRINT:rttMonLatestJitterOperPacketLossSD-rpn:MAX:%5.2lf
+
+COMMENT:\\s
+COMMENT:\\s
+</property>
+<property type="boolean" id="hasSummary" mode="w" >
+True
+</property>
+<property type="long" id="sequence" mode="w" >
+1
+</property>
+<tomanycont id='graphPoints'>
+<object id='rttMonEchoAdminNumPackets' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+DONTDRAW
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf%s
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="dpName" mode="w" >
+rttMonEchoAdminNumPackets_rttMonEchoAdminNumPackets
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+<object id='rttMonLatestJitterOperPacketLossDS' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property type="long" id="sequence" mode="w" >
+2
+</property>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="rpn" mode="w" >
+rttMonEchoAdminNumPackets,/
+</property>
+<property type="string" id="dpName" mode="w" >
+rttMonLatestJitterOperPacketLossDS_rttMonLatestJitterOperPacketLossDS
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+<object id='rttMonLatestJitterOperPacketLossSD' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property type="long" id="sequence" mode="w" >
+1
+</property>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="rpn" mode="w" >
+rttMonEchoAdminNumPackets,/
+</property>
+<property type="string" id="dpName" mode="w" >
+rttMonLatestJitterOperPacketLossSD_rttMonLatestJitterOperPacketLossSD
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Round Trip Time' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
+<property type="int" id="height" mode="w" >
+100
+</property>
+<property type="int" id="width" mode="w" >
+890
+</property>
+<property type="string" id="units" mode="w" >
+ms
+</property>
+<property type="boolean" id="log" mode="w" >
+False
+</property>
+<property type="boolean" id="base" mode="w" >
+False
+</property>
+<property type="int" id="miny" mode="w" >
+0
+</property>
+<property type="int" id="maxy" mode="w" >
+-1
+</property>
+<property type="text" id="custom" mode="w" >
+-P
+-E
+
+LINE2:rttMonLatestRttOperCompletionTime-raw#0000FF:RTT Completion Time
+
+COMMENT:\\s
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:&lt;b&gt;${here/viewName} Results&lt;/b&gt;\:
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:RTT\:
+GPRINT:rttMonLatestRttOperCompletionTime-raw:LAST:%5.2lf
+
+COMMENT:\\s
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:&lt;b&gt;${here/viewName} Spikes&lt;/b&gt;\:
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:RTT\:
+GPRINT:rttMonLatestRttOperCompletionTime-raw:MAX:%5.2lf
+
+COMMENT:\\s
+COMMENT:\\s
+</property>
+<property type="boolean" id="hasSummary" mode="w" >
+True
+</property>
+<tomanycont id='graphPoints'>
+<object id='rttMonLatestRttOperCompletionTime' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf%s
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="dpName" mode="w" >
+rttMonLatestRttOperCompletionTime_rttMonLatestRttOperCompletionTime
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Sense' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
+<property type="int" id="height" mode="w" >
+100
+</property>
+<property type="int" id="width" mode="w" >
+890
+</property>
+<property type="string" id="units" mode="w" >
+Code #
+</property>
+<property type="boolean" id="log" mode="w" >
+False
+</property>
+<property type="boolean" id="base" mode="w" >
+False
+</property>
+<property type="int" id="miny" mode="w" >
+0
+</property>
+<property type="int" id="maxy" mode="w" >
+-1
+</property>
+<property type="text" id="custom" mode="w" >
+-P
+-E
+
+LINE2:rttMonLatestRttOperSense-raw#8888FF:Op Sense
+LINE2:rttMonLatestRttOperApplSpecificSense-raw#88FF88:Specific Op Sense
+
+COMMENT:\\s
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:&lt;b&gt;${here/viewName} Results&lt;/b&gt;\:
+COMMENT:\\s
+COMMENT:\\s
+COMMENT:Op Sense\:
+GPRINT:rttMonLatestRttOperApplSpecificSense-raw:LAST:%5.0lf
+
+COMMENT:Specific Op Sense\:
+GPRINT:rttMonLatestRttOperSense-raw:LAST:%5.0lf
+
+COMMENT:\\s
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:&lt;b&gt;${here/viewName} Spikes&lt;/b&gt;\:
+COMMENT:\\s
+COMMENT:\\s
+COMMENT:Op Sense\:
+GPRINT:rttMonLatestRttOperApplSpecificSense-raw:MAX:%5.0lf
+
+COMMENT:Specific Op Sense\:
+GPRINT:rttMonLatestRttOperSense-raw:MAX:%5.0lf
+
+COMMENT:\\s
+COMMENT:\\s
+</property>
+<property type="boolean" id="hasSummary" mode="w" >
+True
+</property>
+<property type="long" id="sequence" mode="w" >
+1
+</property>
+<tomanycont id='graphPoints'>
+<object id='rttMonLatestRttOperApplSpecificSense' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property type="long" id="sequence" mode="w" >
+1
+</property>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf%s
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="dpName" mode="w" >
+rttMonLatestRttOperApplSpecificSense_rttMonLatestRttOperApplSpecificSense
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+<object id='rttMonLatestRttOperSense' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf%s
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="dpName" mode="w" >
+rttMonLatestRttOperSense_rttMonLatestRttOperSense
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+<object id='New_SLA' module='Products.ZenModel.RRDTemplate' class='RRDTemplate'>
+<property type="string" id="targetPythonClass" mode="w" >
+ZenPacks.ShaneScott.ipSLA.SLADevice
+</property>
+<tomanycont id='datasources'>
+<object id='rttMonLatestRttOperApplSpecificSense' module='ZenPacks.ShaneScott.ipSLA.datasources.SLADataSource' class='SLADataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+SLA
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Cmd/Fail
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="oid" mode="w" >
+1.3.6.1.4.1.9.9.42.1.2.10.1.3
+</property>
+<tomanycont id='datapoints'>
+<object id='rttMonLatestRttOperApplSpecificSense' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+<tomanycont id='aliases'>
+<object id='rttMonLatestRttOperApplSpecificSense' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+<object id='rttMonLatestRttOperCompletionTime' module='ZenPacks.ShaneScott.ipSLA.datasources.SLADataSource' class='SLADataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+SLA
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Cmd/Fail
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="oid" mode="w" >
+1.3.6.1.4.1.9.9.42.1.2.10.1.1
+</property>
+<tomanycont id='datapoints'>
+<object id='rttMonLatestRttOperCompletionTime' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+<tomanycont id='aliases'>
+<object id='rttMonLatestRttOperCompletionTime' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+<object id='rttMonLatestRttOperSense' module='ZenPacks.ShaneScott.ipSLA.datasources.SLADataSource' class='SLADataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+SLA
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Cmd/Fail
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="oid" mode="w" >
+1.3.6.1.4.1.9.9.42.1.2.10.1.2
+</property>
+<tomanycont id='datapoints'>
+<object id='rttMonLatestRttOperSense' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+<tomanycont id='aliases'>
+<object id='rttMonLatestRttOperSense' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+<object id='rttMonLatestRttOperTime' module='ZenPacks.ShaneScott.ipSLA.datasources.SLADataSource' class='SLADataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+SLA
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Cmd/Fail
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="oid" mode="w" >
+1.3.6.1.4.1.9.9.42.1.2.10.1.5
+</property>
+<tomanycont id='datapoints'>
+<object id='rttMonLatestRttOperTime' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+<tomanycont id='aliases'>
+<object id='rttMonLatestRttOperTime' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+<tomanycont id='graphDefs'>
+<object id='Round Trip Time' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
+<property type="int" id="height" mode="w" >
+100
+</property>
+<property type="int" id="width" mode="w" >
+890
+</property>
+<property type="string" id="units" mode="w" >
+ms
+</property>
+<property type="boolean" id="log" mode="w" >
+False
+</property>
+<property type="boolean" id="base" mode="w" >
+False
+</property>
+<property type="int" id="miny" mode="w" >
+0
+</property>
+<property type="int" id="maxy" mode="w" >
+-1
+</property>
+<property type="text" id="custom" mode="w" >
+-P
+-E
+
+LINE2:rttMonLatestRttOperCompletionTime-raw#0000FF:RTT Completion Time
+
+COMMENT:\\s
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:&lt;b&gt;${here/viewName} Results&lt;/b&gt;\:
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:RTT\:
+GPRINT:rttMonLatestRttOperCompletionTime-raw:LAST:%5.2lf
+
+COMMENT:\\s
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:&lt;b&gt;${here/viewName} Spikes&lt;/b&gt;\:
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:RTT\:
+GPRINT:rttMonLatestRttOperCompletionTime-raw:MAX:%5.2lf
+
+COMMENT:\\s
+COMMENT:\\s
+</property>
+<property type="boolean" id="hasSummary" mode="w" >
+True
+</property>
+<tomanycont id='graphPoints'>
+<object id='rttMonLatestRttOperCompletionTime' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf%s
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="dpName" mode="w" >
+rttMonLatestRttOperCompletionTime_rttMonLatestRttOperCompletionTime
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Sense' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
+<property type="int" id="height" mode="w" >
+100
+</property>
+<property type="int" id="width" mode="w" >
+890
+</property>
+<property type="string" id="units" mode="w" >
+Code #
+</property>
+<property type="boolean" id="log" mode="w" >
+False
+</property>
+<property type="boolean" id="base" mode="w" >
+False
+</property>
+<property type="int" id="miny" mode="w" >
+0
+</property>
+<property type="int" id="maxy" mode="w" >
+-1
+</property>
+<property type="text" id="custom" mode="w" >
+-P
+-E
+
+LINE2:rttMonLatestRttOperSense-raw#8888FF:Op Sense
+LINE2:rttMonLatestRttOperApplSpecificSense-raw#88FF88:Specific Op Sense
+
+COMMENT:\\s
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:&lt;b&gt;${here/viewName} Results&lt;/b&gt;\:
+COMMENT:\\s
+COMMENT:\\s
+COMMENT:Op Sense\:
+GPRINT:rttMonLatestRttOperApplSpecificSense-raw:LAST:%5.0lf
+
+COMMENT:Specific Op Sense\:
+GPRINT:rttMonLatestRttOperSense-raw:LAST:%5.0lf
+
+COMMENT:\\s
+COMMENT:\\s
+COMMENT:\\s
+
+COMMENT:&lt;b&gt;${here/viewName} Spikes&lt;/b&gt;\:
+COMMENT:\\s
+COMMENT:\\s
+COMMENT:Op Sense\:
+GPRINT:rttMonLatestRttOperApplSpecificSense-raw:MAX:%5.0lf
+
+COMMENT:Specific Op Sense\:
+GPRINT:rttMonLatestRttOperSense-raw:MAX:%5.0lf
+
+COMMENT:\\s
+COMMENT:\\s
+</property>
+<property type="boolean" id="hasSummary" mode="w" >
+True
+</property>
+<property type="long" id="sequence" mode="w" >
+1
+</property>
+<tomanycont id='graphPoints'>
+<object id='rttMonLatestRttOperApplSpecificSense' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property type="long" id="sequence" mode="w" >
+1
+</property>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf%s
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="dpName" mode="w" >
+rttMonLatestRttOperApplSpecificSense_rttMonLatestRttOperApplSpecificSense
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+<object id='rttMonLatestRttOperSense' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf%s
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="dpName" mode="w" >
+rttMonLatestRttOperSense_rttMonLatestRttOperSense
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+<!-- ('', 'zport', 'dmd', 'Reports', 'Performance Reports', 'ipSLA') -->
+<object id='/zport/dmd/Reports/Performance Reports/ipSLA' module='Products.ZenModel.ReportClass' class='ReportClass'>
+<object id='Packet Loss' module='Products.ZenModel.Report' class='Report'>
+</object>
+<object id='Round Trip Time' module='Products.ZenModel.Report' class='Report'>
+</object>
+<object id='Jitter' module='Products.ZenModel.Report' class='Report'>
+</object>
+<object id='Mean Opinion Score' module='Products.ZenModel.Report' class='Report'>
+</object>
+</object>
+</objects>
